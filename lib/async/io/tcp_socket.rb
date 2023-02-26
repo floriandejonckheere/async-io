@@ -70,8 +70,8 @@ module Async
 			
 			def sysread(size, buffer = nil)
 				data = @stream.read_partial(size)
-				
-				if buffer
+
+				if buffer && data
 					buffer.replace(data)
 				end
 				
